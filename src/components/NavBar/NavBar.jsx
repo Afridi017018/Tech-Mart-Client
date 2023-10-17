@@ -2,7 +2,7 @@ import React from 'react';
 
 const NavBar = () => {
     return (
-        <div className='bg-blue-100'>
+        <div className='bg-blue-200'>
             <div className="navbar container mx-auto h-24">
                 <div className="navbar-start">
                     <div className="dropdown">
