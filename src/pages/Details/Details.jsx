@@ -17,23 +17,23 @@ const Details = () => {
                 <hr className='my-3 w-4/5' />
 
                 <div className='font-bold text-gray-500 '>
-                <div className='flex justify-between'>
+                <div className='flex justify-between my-1'>
                     <p>Brand:</p>
                     <p>Samsung</p>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between my-1'>
                 <p>Type:</p>
                     <p>Phone</p>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between my-1'>
                     <p>Price:</p>
                     <p>$99</p>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between my-1'>
                     <p>Rating:</p>
                     <p>4.8*</p>
                 </div>
-                <div className='flex justify-between'>
+                <div className='flex justify-between my-1'>
                     <p>Warranty:</p>
                     <p>7 Days</p>
                 </div>
