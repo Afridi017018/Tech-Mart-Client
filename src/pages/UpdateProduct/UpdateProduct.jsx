@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const AddProduct = () => {
+const UpdateProduct = () => {
     const [product, setProduct] = useState({
         image: '',
         name: '',
@@ -19,11 +19,12 @@ const AddProduct = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(product);
+   
     };
 
     return (
         <div className=" max-w-4xl mx-auto my-10 p-6 bg-white rounded-md shadow-2xl border text-blue-800">
-            <h2 className="text-2xl font-semibold mb-4">Add Product</h2>
+            <h2 className="text-2xl font-semibold mb-4">Update Product</h2>
             <form onSubmit={handleSubmit}>
 
                 <div className="mb-4">
@@ -121,7 +122,7 @@ const AddProduct = () => {
                     type="submit"
                     className="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-2 px-4 my-2 rounded"
                 >
-                    Add Product
+                    Update Product
                 </button>
                 </div>
             </form>
@@ -129,4 +130,4 @@ const AddProduct = () => {
     );
 };
 
-export default AddProduct;
+export default UpdateProduct;
