@@ -6,7 +6,7 @@ import { FaAward } from "react-icons/fa";
 const PositiveSide = () => {
     return (
         <div className="flex my-10 gap-5 justify-center container mx-auto px-5 lg:px-0">
-            <div className="border w-2/3 h-52 flex flex-col items-center justify-center gap-7 bg-blue-50">
+            <div className="border w-2/3 h-52 flex flex-col items-center justify-center shadow-xl gap-7 bg-blue-50">
                 <div className='text-4xl text-blue-800'>
                     <LiaShippingFastSolid />
                 </div>
@@ -15,7 +15,7 @@ const PositiveSide = () => {
                     FAST SHIPPING
                 </div>
             </div>
-            <div className="border w-2/3 h-52 flex flex-col items-center justify-center gap-7 bg-blue-50">
+            <div className="border w-2/3 h-52 flex flex-col items-center justify-center shadow-xl gap-7 bg-blue-50">
                 <div className='text-4xl text-blue-800'>
                     <ImLoop2 />
                 </div>
@@ -24,7 +24,7 @@ const PositiveSide = () => {
                     30 DAY RETURNS
                 </div>
             </div>
-            <div className="border w-2/3 h-52 flex flex-col items-center justify-center gap-7 bg-blue-50">
+            <div className="border w-2/3 h-52 flex flex-col items-center justify-center shadow-xl gap-7 bg-blue-50">
                 <div className='text-4xl text-blue-800'>
                     <FaAward />
                 </div>

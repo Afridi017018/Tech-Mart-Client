@@ -3,7 +3,9 @@ import App from "./App";
 import AddProduct from "./pages/AddProduct/AddProduct";
 import Details from "./pages/Details/Details";
 import Home from "./pages/Home/Home";
+import Login from "./pages/Login/Login";
 import Products from "./pages/Products/Products";
+import Register from "./pages/Register/Register";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
 
 export const router = createBrowserRouter([
@@ -22,15 +24,23 @@ export const router = createBrowserRouter([
           },
           {
             path: "/details",
-            element: <Details/>,
+            element: <Details />,
           },
           {
             path: "/addProduct",
-            element: <AddProduct/>,
+            element: <AddProduct />,
           },
           {
             path: "/updateProduct",
-            element: <UpdateProduct/>,
+            element: <UpdateProduct />,
+          },
+          {
+            path: "/login",
+            element: <Login />,
+          },
+          {
+            path: "/register",
+            element: <Register />,
           },
         
       ],
