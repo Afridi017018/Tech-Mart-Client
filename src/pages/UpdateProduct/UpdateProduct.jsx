@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
+import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const UpdateProduct = () => {
-    const [product, setProduct] = useState({
-        image: '',
-        name: '',
-        brand: '',
-        type: '',
-        price: '',
-        description: '',
-        rating: '',
-    });
+    
+    const productData = useLoaderData().result;
+    if(!productData?._id)
+    {
+        throw new Error("wrong path");
+    }
 
+    const [product, setProduct] = useState({
+        _id: productData._id,
+        image: productData.image,
+        name: productData.name,
+        brand: productData.brand,
+        type: productData.type,
+        price: productData.price,
+        description: productData.description,
+        rating: productData.rating,
+    });
+   
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setProduct({ ...product, [name]: value });
@@ -18,7 +28,19 @@ const UpdateProduct = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(product);
+
+        fetch(`http://localhost:4000/update-product`,{
+            method: "PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(product)
+        })
+       .then(res=>res.json())
+       .then((data)=>{
+        toast.dismiss();
+        toast.success("Updated Successfully")
+       })
    
     };
 

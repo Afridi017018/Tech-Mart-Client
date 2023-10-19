@@ -125,10 +125,10 @@ const NavBar = () => {
                     </div>
                     <div onClick={()=>navigate("/")} className="text-xl font-bold flex cursor-pointer">
                         <div className='bg-green-700 text-white text-center px-2 py-1 rounded-l-md'>
-                            Event
+                            Tech
                         </div>
                         <div className='bg-red-700 text-white text-center px-2 py-1 rounded-r-md'>
-                            Station
+                            Mart
                         </div>
                     </div>
                 </div>

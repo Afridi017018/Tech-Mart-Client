@@ -3,6 +3,7 @@ import Advertisement from '../../components/Advertisement/Advertisement';
 import ProductsCards from '../../components/ProductCards/ProductsCards';
 
 const Products = () => {
+    
     return (
         <div>
             <Advertisement />

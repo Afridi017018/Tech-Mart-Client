@@ -18,14 +18,17 @@ export const router = createBrowserRouter([
       children: [
         {
           path: "/",
+          loader: () => fetch('/fakeData.json'),
           element: <Home />,
         },
         {
-            path: "/products",
+            path: "/products/:brand",
+            loader: ({params}) => fetch(`http://localhost:4000/get-products?brand=${params.brand}`),
             element: <Products />,
           },
           {
-            path: "/details",
+            path: "/details/:productId",
+            loader: ({params}) => fetch(`http://localhost:4000/get-single-product/${params.productId}`),
             element: <Details />,
           },
           {
@@ -33,7 +36,8 @@ export const router = createBrowserRouter([
             element: <AddProduct />,
           },
           {
-            path: "/updateProduct",
+            path: "/updateProduct/:productId",
+            loader: ({params}) => fetch(`http://localhost:4000/get-single-product/${params.productId}`),
             element: <UpdateProduct />,
           },
           {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
 
 const AddProduct = () => {
     const [product, setProduct] = useState({
@@ -18,7 +19,41 @@ const AddProduct = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(product);
+
+        fetch(`http://localhost:4000/add-product`,{
+            method: "POST",
+            headers:{
+                "Content-Type" : "application/json"
+            },
+            body: JSON.stringify(product)
+        })
+        .then(res=>res.json())
+        .then((data)=>{
+
+            toast.dismiss();
+            if(data?.result?.acknowledged)
+            {
+              
+                // setProduct({
+                //     image: '',
+                //     name: '',
+                //     brand: '',
+                //     type: '',
+                //     price: '',
+                //     description: '',
+                //     rating: '',
+                // })
+
+                toast.success("Product Added Successfully")
+            }
+            else{
+                toast.error("Product Added Failed")
+            }
+        })
+
+        // console.log(product);
+
+
     };
 
     return (
