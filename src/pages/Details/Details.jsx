@@ -17,6 +17,7 @@ const handleCart = ()=>{
     const obj = {
         user: user.email,
         productId: productDetails._id,
+        image:productDetails.image,
         name: productDetails.name,
         brand: productDetails.brand,
         price: productDetails.price

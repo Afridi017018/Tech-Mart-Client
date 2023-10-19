@@ -48,7 +48,8 @@ const CartItems = () => {
            }
 
             {cartItems.length === 0 &&
-                <div className='flex justify-center items-center min-h-[553px]'>
+                <div className='flex flex-col justify-center items-center min-h-[553px]'>
+                   <img className='opacity-30' src="https://cdni.iconscout.com/illustration/free/thumb/free-empty-cart-4085814-3385483.png" alt="" />
                     <h1 className='text-2xl font-bold text-gray-500'>Cart Is Empty !</h1>
                 </div>
             }

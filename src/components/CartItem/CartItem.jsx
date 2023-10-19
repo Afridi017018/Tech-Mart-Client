@@ -7,7 +7,22 @@ const CartItem = ({element}) => {
 
 
     const handlePayment = (id)=>{
-        // navigate(`/paymentInfo/${id}`);
+        Swal.fire(
+            'Payment Successful!',
+            '',
+            'success'
+        ).then((result) => {
+
+            if (result.isConfirmed) {
+                fetch(`http://localhost:4000/delete-cart-item/${id}`,{
+                    method: "DELETE",
+                    headers:{
+                        "Content-Type": "application/json"
+                    },
+
+                })
+            }
+        })
     }
 
     const handleRemove =(id)=>{
@@ -49,7 +64,7 @@ const CartItem = ({element}) => {
         <div className='px-5 md:px-20 my-5'>
             <div className='flex h-56 bg-blue-50 border border-gray-300 rounded-md shadow-xl'>
                 <div>
-                    <img className='h-full w-full rounded-l-md' src="https://img.freepik.com/premium-photo/technician-man-repairing-cleaning-maintenance-air-conditioner_101276-183.jpg?w=740" alt="" />
+                    <img className='h-full w-80 rounded-l-md' src={element.image} alt="" />
                 </div>
                 <div className='rounded-r-md flex flex-col justify-center px-3 md:px-10 w-full'>
                     {/* <p className='bg-red-300 px-2 inline-block text-red-900 rounded'>AC</p> */}
@@ -61,7 +76,7 @@ const CartItem = ({element}) => {
                     <hr />
 
                     <div className='flex gap-5 justify-center my-3 text-sm md:text-base'>
-                        <button onClick={handlePayment} className='bg-green-700 hover:bg-green-800 text-white px-2 md:px-3 py-1 rounded-md'>Proceed To Payment</button>
+                        <button onClick={()=>handlePayment(element._id)} className='bg-green-700 hover:bg-green-800 text-white px-2 md:px-3 py-1 rounded-md'>Make Payment</button>
                         <button onClick={()=>handleRemove(element._id)} className='bg-red-700 hover:bg-red-800 text-white px-2 py-1 rounded-md'>Remove</button>
                     </div>
 
