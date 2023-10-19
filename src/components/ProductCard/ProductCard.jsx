@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiFillStar } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 
 const ProductCard = ({ element }) => {
@@ -14,7 +15,7 @@ const ProductCard = ({ element }) => {
                     <p>Brand: {element.brand}</p>
                     <p>Type: {element.type}</p>
                     <p>Price: ${element.price}</p>
-                    <p>Rating: {element.rating}*</p>
+                    <div className='flex items-center mb-3'>Rating: {element.rating}<AiFillStar className=' text-orange-500 text-lg' /></div>
                     <div className="card-actions justify-center">
                         <button onClick={()=>navigate(`/details/${element._id}`)} className="bg-blue-800 hover:bg-blue-950 px-2 py-1 w-28 rounded text-white text-lg">See Details</button>
                         <button onClick={()=>navigate(`/updateProduct/${element._id}`)} className="bg-green-800 hover:bg-green-950 px-2 py-1 w-28 rounded text-white text-lg">Update</button>

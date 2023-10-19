@@ -9,6 +9,8 @@ import Login from "./pages/Login/Login";
 import Products from "./pages/Products/Products";
 import Register from "./pages/Register/Register";
 import UpdateProduct from "./pages/UpdateProduct/UpdateProduct";
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 export const router = createBrowserRouter([
     {
@@ -29,28 +31,28 @@ export const router = createBrowserRouter([
           {
             path: "/details/:productId",
             loader: ({params}) => fetch(`http://localhost:4000/get-single-product/${params.productId}`),
-            element: <Details />,
+            element: <PrivateRoute><Details /></PrivateRoute>,
           },
           {
             path: "/addProduct",
-            element: <AddProduct />,
+            element: <PrivateRoute><AddProduct /></PrivateRoute>,
           },
           {
             path: "/updateProduct/:productId",
             loader: ({params}) => fetch(`http://localhost:4000/get-single-product/${params.productId}`),
-            element: <UpdateProduct />,
+            element: <PrivateRoute><UpdateProduct /></PrivateRoute>,
           },
           {
             path: "/cart",
-            element: <Cart />,
+            element: <PrivateRoute><Cart /></PrivateRoute>,
           },
           {
             path: "/login",
-            element: <Login />,
+            element: <PublicRoute><Login /></PublicRoute>,
           },
           {
             path: "/register",
-            element: <Register />,
+            element: <PublicRoute><Register /></PublicRoute>,
           },
         
       ],

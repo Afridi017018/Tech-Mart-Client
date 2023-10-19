@@ -1,4 +1,5 @@
 import React from 'react';
+import { AiFillStar } from "react-icons/ai";
 import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -71,7 +72,10 @@ const handleCart = ()=>{
                             </div>
                             <div className='flex justify-between my-1'>
                                 <p>Rating:</p>
-                                <p>{productDetails.rating}*</p>
+                                <div className='flex justify-center items-center gap-1'>
+                                <p>{productDetails.rating} </p>
+                                <AiFillStar className=' text-orange-500' />
+                                </div>
                             </div>
                             <div className='flex justify-between my-1'>
                                 <p>Warranty:</p>

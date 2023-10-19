@@ -2,7 +2,8 @@ import React from 'react';
 import { useContext } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { AuthContext } from './components/providers/AuthProvider';
-import Loading from './page/Loading/Loading';
+import Loading from './pages/Loading/Loading';
+
 
 const PublicRoute = ({children}) => {
     const {user,loading} = useContext(AuthContext);
