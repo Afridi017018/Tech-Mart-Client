@@ -1,0 +1,92 @@
+[
+    {
+        "id" : "s123451",
+        "brand": "samsung",
+        "sliderImage": "https://i.ibb.co/cXbcf2p/sam2.webp"
+
+    },
+    {
+        "id" : "s123452",
+        "brand": "samsung",
+        "sliderImage": "https://i.ibb.co/Ln9HWny/sam1.jpg"
+
+    },
+    {
+        "id" : "s123453",
+        "brand": "samsung",
+        "sliderImage": "https://i.ibb.co/LQt0qsc/sam3.jpg"
+
+    },
+    {
+        "id" : "s123455",
+        "brand": "sony",
+        "sliderImage": "https://i.ibb.co/98h9Vmn/sony1.jpg"
+
+    },
+    {
+        "id" : "s123456",
+        "brand": "sony",
+        "sliderImage": "https://i.ibb.co/6s7MNtY/sony2.jpg"
+
+    },
+    {
+        "id" : "s123457",
+        "brand": "sony",
+        "sliderImage": "https://i.ibb.co/zrYzyZY/sony3.jpg"
+
+    },
+    {
+        "id" : "s123458",
+        "brand": "apple",
+        "sliderImage": "https://i.ibb.co/Vjbg1sx/ip1.jpg"
+
+    },
+    {
+        "id" : "s123459",
+        "brand": "apple",
+        "sliderImage": "https://i.ibb.co/JdWyhsC/ip2.webp"
+
+    },
+    {
+        "id" : "s123460",
+        "brand": "apple",
+        "sliderImage": "https://i.ibb.co/M6SX5Cv/ip3.webp"
+
+    },
+    {
+        "id" : "s123461",
+        "brand": "walton",
+        "sliderImage": "https://i.ibb.co/whr14g4/wa1.jpg"
+
+    },
+    {
+        "id" : "s123462",
+        "brand": "walton",
+        "sliderImage": "https://i.ibb.co/615KrGc/wa2.jpg"
+
+    },
+    {
+        "id" : "s123463",
+        "brand": "walton",
+        "sliderImage": "https://i.ibb.co/mSNSLkS/wa3.jpg"
+
+    },
+    {
+        "id" : "s123464",
+        "brand": "xiaomi",
+        "sliderImage": "https://i.ibb.co/SBBRmw8/xi1.jpg"
+
+    },
+    {
+        "id" : "s123465",
+        "brand": "xiaomi",
+        "sliderImage": "https://i.ibb.co/199tx2W/xi2.jpg"
+
+    },
+    {
+        "id" : "s123466",
+        "brand": "xiaomi",
+        "sliderImage": "https://i.ibb.co/sg4nFN0/xi3.png"
+
+    }
+]

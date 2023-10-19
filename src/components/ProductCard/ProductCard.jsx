@@ -8,8 +8,8 @@ const ProductCard = ({ element }) => {
 
     return (
         <div>
-            <div className="card card-side bg-blue-50 h-80 w-full shadow-xl rounded-md">
-                <img className='h-full w-2/4 rounded-l-md' src={element.image} alt="Album" />
+            <div className="card card-side h-80 w-full shadow-xl border rounded-md">
+                <img className='h-full w-2/4 rounded-l-md py-2 px-2' src={element.image} alt="Album" />
                 <div className="card-body text-gray-500 capitalize">
                     <h2 className="card-title text-blue-800">{element.name}</h2>
                     <p>Brand: {element.brand}</p>

@@ -1,26 +1,32 @@
 [
     {
-        "id" : "123451",
+        "id": "f123451",
         "brand": "samsung",
-        "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7FYneQJseetJZxaO9u9zpoN1I6gOaukwNdokqaiJIXw5tkBwP9wOS_sZuoF3GLt5fUA&usqp=CAU"
-
+        "brandImage": "https://i.ibb.co/8spC3pw/samsung-Logo.jpg"
     },
     {
-        "id" : "123452",
+        "id": "f123452",
         "brand": "walton",
-        "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7FYneQJseetJZxaO9u9zpoN1I6gOaukwNdokqaiJIXw5tkBwP9wOS_sZuoF3GLt5fUA&usqp=CAU"
-
+        "brandImage": "https://i.ibb.co/cwmPq8B/walton-Logo.jpg"
     },
     {
-        "id" : "123453",
+        "id": "f123453",
         "brand": "apple",
-        "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7FYneQJseetJZxaO9u9zpoN1I6gOaukwNdokqaiJIXw5tkBwP9wOS_sZuoF3GLt5fUA&usqp=CAU"
-
+        "brandImage": "https://i.ibb.co/rf6G5XZ/apple-Logo.jpg"
     },
     {
-        "id" : "123454",
+        "id": "f123454",
         "brand": "sony",
-        "brandImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV7FYneQJseetJZxaO9u9zpoN1I6gOaukwNdokqaiJIXw5tkBwP9wOS_sZuoF3GLt5fUA&usqp=CAU"
-
+        "brandImage": "https://i.ibb.co/1KhDsFb/sonyLogo.jpg"
+    },
+    {
+        "id": "f123455",
+        "brand": "xiaomi",
+        "brandImage": "https://i.ibb.co/qmwXrJK/xiaomi-Logo.jpg"
+    },
+    {
+        "id": "f123456",
+        "brand": "huawei",
+        "brandImage": "https://i.ibb.co/JcVC4SQ/huawei-Logo.jpg"
     }
 ]

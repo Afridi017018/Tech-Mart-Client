@@ -12,12 +12,12 @@ const NavBar = () => {
         await logOut();
     }
 
-    const links = <div className='flex flex-col gap-2 lg:flex-row lg:gap-10 font-medium lg:text-lg'>
+    const links = <div className='flex flex-col gap-2 lg:flex-row lg:gap-10 font-medium lg:text-lg text-blue-700'>
         <li>
             <NavLink
                 to="/"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-blue-700 font-bold underline underline-offset-4" : ""
+                    isPending ? "pending" : isActive ? "text-blue-800 font-bold underline underline-offset-4" : ""
                 }
             >
                 Home
@@ -27,7 +27,7 @@ const NavBar = () => {
             <NavLink
                 to="/addProduct"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-blue-700 font-bold underline underline-offset-4" : ""
+                    isPending ? "pending" : isActive ? "text-blue-800 font-bold underline underline-offset-4" : ""
                 }
             >
                 Add Product
@@ -37,7 +37,7 @@ const NavBar = () => {
             <NavLink
                 to="/cart"
                 className={({ isActive, isPending }) =>
-                    isPending ? "pending" : isActive ? "text-blue-700 font-bold underline underline-offset-4" : ""
+                    isPending ? "pending" : isActive ? "text-blue-800 font-bold underline underline-offset-4" : ""
                 }
             >
                 My Cart
@@ -50,7 +50,7 @@ const NavBar = () => {
                     <NavLink
                         to="/login"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-700 font-bold underline underline-offset-4" : ""
+                            isPending ? "pending" : isActive ? "text-blue-800 font-bold underline underline-offset-4" : ""
                         }
                     >
                         Login
@@ -60,7 +60,7 @@ const NavBar = () => {
                     <NavLink
                         to="/register"
                         className={({ isActive, isPending }) =>
-                            isPending ? "pending" : isActive ? "text-blue-700 font-bold underline underline-offset-4" : ""
+                            isPending ? "pending" : isActive ? "text-blue-800 font-bold underline underline-offset-4" : ""
                         }
                     >
                         Register
@@ -123,7 +123,7 @@ const NavBar = () => {
                         </ul>
 
                     </div>
-                    <div onClick={()=>navigate("/")} className="text-xl font-bold flex cursor-pointer">
+                    <div onClick={() => navigate("/")} className="text-xl font-bold flex cursor-pointer">
                         <div className='bg-green-700 text-white text-center px-2 py-1 rounded-l-md'>
                             Tech
                         </div>
