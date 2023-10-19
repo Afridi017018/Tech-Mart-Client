@@ -1,12 +1,48 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
-const CartItem = () => {
 
-    const navigate = useNavigate()
+
+const CartItem = ({element}) => {
+
 
     const handlePayment = (id)=>{
         // navigate(`/paymentInfo/${id}`);
+    }
+
+    const handleRemove =(id)=>{
+  
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+                
+                fetch(`http://localhost:4000/delete-cart-item/${id}`,{
+                    method: "DELETE",
+                    headers:{
+                        "Content-Type": "application/json"
+                    },
+
+
+                })
+                .then(res=>res.json())
+                .then((data)=>{
+            
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                      )
+                })
+              
+            }
+          })
     }
 
     return (
@@ -17,16 +53,16 @@ const CartItem = () => {
                 </div>
                 <div className='rounded-r-md flex flex-col justify-center px-3 md:px-10 w-full'>
                     {/* <p className='bg-red-300 px-2 inline-block text-red-900 rounded'>AC</p> */}
-                    <h2 className='text-lg md:text-xl font-bold my-1'>Samsung Galaxy A30</h2>
+                    <h2 className='text-lg md:text-xl font-bold my-1'>{element.name}</h2>
                     <hr />
-                    <h4 className='text-lg text-gray-500 my-1'>Brand: Samsung</h4>
+                    <h4 className='text-lg text-gray-500 my-1'>Brand: {element.brand}</h4>
                     <h4 className='text-lg text-gray-500 my-1'>Warranty: 7 days</h4>
-                    <h4 className='text-lg text-gray-500 my-1'>Price: $99</h4>
+                    <h4 className='text-lg text-gray-500 my-1'>Price: ${element.price}</h4>
                     <hr />
 
                     <div className='flex gap-5 justify-center my-3 text-sm md:text-base'>
-                        <button onClick={()=>handlePayment("element.serviceId._id")} className='bg-green-700 hover:bg-green-800 text-white px-2 md:px-3 py-1 rounded-md'>Proceed To Payment</button>
-                        <button className='bg-red-700 hover:bg-red-800 text-white px-2 py-1 rounded-md'>Remove</button>
+                        <button onClick={handlePayment} className='bg-green-700 hover:bg-green-800 text-white px-2 md:px-3 py-1 rounded-md'>Proceed To Payment</button>
+                        <button onClick={()=>handleRemove(element._id)} className='bg-red-700 hover:bg-red-800 text-white px-2 py-1 rounded-md'>Remove</button>
                     </div>
 
                 </div>

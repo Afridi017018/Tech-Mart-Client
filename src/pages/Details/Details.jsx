@@ -1,10 +1,40 @@
 import React from 'react';
+import { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { AuthContext } from '../../components/providers/AuthProvider';
 
 const Details = () => {
-
+    const {user} = useContext(AuthContext);
     const productDetails = useLoaderData().result;
+//  console.log(user.email, productDetails._id)
 
+
+
+const handleCart = ()=>{
+
+    const obj = {
+        user: user.email,
+        productId: productDetails._id,
+        name: productDetails.name,
+        brand: productDetails.brand,
+        price: productDetails.price
+    }
+
+    fetch(`http://localhost:4000/add-to-cart`,{
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json"
+        },
+        body : JSON.stringify(obj)
+    })
+    .then(res=>res.json())
+    .then((data)=>{
+        toast.dismiss();
+        toast.success("Added To The Cart")
+    })
+}
+    
 
     return (
         <div>
@@ -53,7 +83,7 @@ const Details = () => {
                         <hr className='my-3 w-4/5' />
 
                         <div className='text-center my-5'>
-                            <button className='py-1 px-2 rounded-md text-lg text-white bg-blue-800 hover:bg-blue-950'>Add To Cart</button>
+                            <button onClick={handleCart} className='py-1 px-2 rounded-md text-lg text-white bg-blue-800 hover:bg-blue-950'>Add To Cart</button>
                         </div>
 
                     </div>
