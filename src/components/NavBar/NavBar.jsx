@@ -126,11 +126,8 @@ const NavBar = ({theme, setTheme}) => {
 
                     </div>
                     <div onClick={() => navigate("/")} className="text-xl font-bold flex cursor-pointer">
-                        <div className='bg-blue-800 text-white text-center px-2 py-1 rounded-l-sm'>
-                            Tech
-                        </div>
-                        <div className='bg-blue-400 text-white text-center px-2 py-1 rounded-r-sm'>
-                            Mart
+                        <div>
+                            <img className='h-10 w-28' src="/techlogo.png" alt="" />
                         </div>
                     </div>
                 </div>

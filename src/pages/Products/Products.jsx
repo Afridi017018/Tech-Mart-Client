@@ -9,6 +9,7 @@ const Products = () => {
     const brandProduct = useLoaderData();
     const { brand } = useParams();
     const [sliderBrand, setSliderBrand] = useState([]);
+
     // console.log(brandProduct.result)
 
     useEffect(() => {
