@@ -14,7 +14,7 @@ const CartItem = ({element}) => {
         ).then((result) => {
 
             if (result.isConfirmed) {
-                fetch(`http://localhost:4000/delete-cart-item/${id}`,{
+                fetch(`https://brand-shop-server-a10.vercel.app/delete-cart-item/${id}`,{
                     method: "DELETE",
                     headers:{
                         "Content-Type": "application/json"
@@ -38,7 +38,10 @@ const CartItem = ({element}) => {
           }).then((result) => {
             if (result.isConfirmed) {
                 
-                fetch(`http://localhost:4000/delete-cart-item/${id}`,{
+                fetch(`https://brand-shop-server-a10.vercel.app
+
+
+/delete-cart-item/${id}`,{
                     method: "DELETE",
                     headers:{
                         "Content-Type": "application/json"
@@ -76,7 +79,7 @@ const CartItem = ({element}) => {
                     <hr />
 
                     <div className='flex gap-5 justify-center my-3 text-sm md:text-base'>
-                        <button onClick={()=>handlePayment(element._id)} className='bg-green-700 hover:bg-green-800 text-white px-2 md:px-3 py-1 rounded-md'>Make Payment</button>
+                        <button onClick={()=>handlePayment(element._id)} className='bg-green-700 hover:bg-green-800 text-white px-2 md:px-3 py-1 rounded-md'>Proceed To Payment</button>
                         <button onClick={()=>handleRemove(element._id)} className='bg-red-700 hover:bg-red-800 text-white px-2 py-1 rounded-md'>Remove</button>
                     </div>
 

@@ -29,7 +29,7 @@ const UpdateProduct = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:4000/update-product`,{
+        fetch(`https://brand-shop-server-a10.vercel.app/update-product`,{
             method: "PUT",
             headers:{
                 "Content-Type": "application/json"

@@ -3,7 +3,7 @@ import React from 'react';
 const Advertisement = ({sliderBrand}) => {
     // console.log(sliderBrand)
     return (
-        <div className='container mx-auto my-10'>
+        <div className='container mx-auto my-10 px-5 lg:px-0'>
            {
             sliderBrand.length > 0 &&
             <div className="carousel h-[450px] w-full rounded-md">

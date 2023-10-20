@@ -11,7 +11,7 @@ const PositiveSide = () => {
                     <LiaShippingFastSolid />
                 </div>
 
-                <div className='text-sm md:text-xl text-blue-800'>
+                <div className='text-xs md:text-xl text-blue-800'>
                     FAST SHIPPING
                 </div>
             </div>
@@ -20,7 +20,7 @@ const PositiveSide = () => {
                     <ImLoop2 />
                 </div>
 
-                <div className='text-sm md:text-xl text-blue-800'>
+                <div className='text-xs md:text-xl text-blue-800'>
                     30 DAY RETURNS
                 </div>
             </div>
@@ -29,7 +29,7 @@ const PositiveSide = () => {
                     <FaAward />
                 </div>
 
-                <div className='text-sm md:text-xl text-blue-800'>
+                <div className='text-xs md:text-xl text-blue-800'>
                     BEST TECHNOLOGY
                 </div>
             </div>

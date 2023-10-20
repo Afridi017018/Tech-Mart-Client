@@ -7,7 +7,7 @@ const ProductCard = ({ element }) => {
     const navigate = useNavigate()
 
     return (
-        <div>
+        <div className='px-5 lg:px-0'>
             <div className="card card-side h-80 w-full shadow-xl border rounded-md">
                 <img className='h-full w-2/4 rounded-l-md py-2 px-2' src={element.image} alt="Album" />
                 <div className="card-body text-gray-500 capitalize">

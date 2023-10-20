@@ -23,7 +23,7 @@ const handleCart = ()=>{
         price: productDetails.price
     }
 
-    fetch(`http://localhost:4000/add-to-cart`,{
+    fetch(`https://brand-shop-server-a10.vercel.app/add-to-cart`,{
         method: "POST",
         headers:{
             "Content-Type": "application/json"
@@ -52,7 +52,7 @@ const handleCart = ()=>{
                         </div>
                         <hr className='my-3 w-4/5' />
                         <div>
-                            <p>
+                            <p className='text-gray-500'>
                                 {productDetails.description}
                             </p>
                         </div>

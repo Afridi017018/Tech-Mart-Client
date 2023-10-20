@@ -124,10 +124,10 @@ const NavBar = () => {
 
                     </div>
                     <div onClick={() => navigate("/")} className="text-xl font-bold flex cursor-pointer">
-                        <div className='bg-green-700 text-white text-center px-2 py-1 rounded-l-md'>
+                        <div className='bg-blue-800 text-white text-center px-2 py-1 rounded-l-sm'>
                             Tech
                         </div>
-                        <div className='bg-red-700 text-white text-center px-2 py-1 rounded-r-md'>
+                        <div className='bg-blue-400 text-white text-center px-2 py-1 rounded-r-sm'>
                             Mart
                         </div>
                     </div>

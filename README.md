@@ -1,8 +1,15 @@
-# React + Vite
+# Tech-Mart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## [ Live Site Link](https://tech-mart-6a8a0.web.app/)
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **User Authentication:** Users can create an account or log in securely. Google sign-up is available for a quick and convenient registration process, allowing users to use their Google credentials.
+
+- **Product Management:** User can easily add new products and keep product information updated.
+
+- **Shopping Cart:** Users can add products to their virtual shopping cart for easy selection and review before making a final purchase.
+
+- **Product Updates:** User can modify product details, such as pricing, descriptions, etc.
+
+- **Cart Management:** Users have the flexibility to control the contents of their shopping cart. They can add or remove items in the cart.

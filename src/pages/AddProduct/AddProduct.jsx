@@ -20,38 +20,27 @@ const AddProduct = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch(`http://localhost:4000/add-product`,{
+        fetch(`https://brand-shop-server-a10.vercel.app/add-product`, {
             method: "POST",
-            headers:{
-                "Content-Type" : "application/json"
+            headers: {
+                "Content-Type": "application/json"
             },
             body: JSON.stringify(product)
         })
-        .then(res=>res.json())
-        .then((data)=>{
+            .then(res => res.json())
+            .then((data) => {
 
-            toast.dismiss();
-            if(data?.result?.acknowledged)
-            {
-              
-                // setProduct({
-                //     image: '',
-                //     name: '',
-                //     brand: '',
-                //     type: '',
-                //     price: '',
-                //     description: '',
-                //     rating: '',
-                // })
+                toast.dismiss();
+                if (data?.result?.acknowledged) {
 
-                toast.success("Product Added Successfully")
-            }
-            else{
-                toast.error("Product Added Failed")
-            }
-        })
+                    toast.success("Product Added Successfully")
+                }
+                else {
+                    toast.error("Product Added Failed")
+                }
+            })
 
-        // console.log(product);
+       
 
 
     };
@@ -152,12 +141,12 @@ const AddProduct = () => {
                 </div>
 
                 <div className='text-center'>
-                <button
-                    type="submit"
-                    className="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-2 px-4 my-2 rounded"
-                >
-                    Add Product
-                </button>
+                    <button
+                        type="submit"
+                        className="bg-blue-800 hover:bg-blue-950 text-white font-semibold py-2 px-4 my-2 rounded"
+                    >
+                        Add Product
+                    </button>
                 </div>
             </form>
         </div>

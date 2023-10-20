@@ -12,10 +12,12 @@ const CartItems = () => {
 
     const { user } = useContext(AuthContext);
     const [cartItems, setCartItems] = useState([])
-    // console.log(user?.email)
+
+    const [cartLoading, setCartLoading] = useState(true);
+
     useEffect(() => {
 
-        fetch(`http://localhost:4000/get-cart-items`, {
+        fetch(`https://brand-shop-server-a10.vercel.app/get-cart-items`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -27,6 +29,7 @@ const CartItems = () => {
             .then(res => res.json())
             .then((data) => {
                 setCartItems(data.result);
+                setCartLoading(false)
             })
 
     }, [user?.email, cartItems])
@@ -44,14 +47,20 @@ const CartItems = () => {
                     :
 
                     <Loading />
-              
-           }
 
-            {cartItems.length === 0 &&
-                <div className='flex flex-col justify-center items-center min-h-[553px]'>
-                   <img className='opacity-30' src="https://cdni.iconscout.com/illustration/free/thumb/free-empty-cart-4085814-3385483.png" alt="" />
-                    <h1 className='text-2xl font-bold text-gray-500'>Cart Is Empty !</h1>
-                </div>
+            }
+
+            {
+                cartLoading ?
+
+                    <Loading />
+
+                    :
+                    cartItems.length === 0 &&
+                    <div className='flex flex-col justify-center items-center min-h-[553px]'>
+                        <img className='opacity-30' src="https://cdni.iconscout.com/illustration/free/thumb/free-empty-cart-4085814-3385483.png" alt="" />
+                        <h1 className='text-2xl font-bold text-gray-500'>Cart Is Empty !</h1>
+                    </div>
             }
 
         </div>
