@@ -3,9 +3,9 @@ import React from 'react';
 const ContactUs = () => {
     return (
         <div className='container mx-auto md:mt-28 mb-10'>
-            <div className='bg-blue-50 py-16 relative lg:px-20'>
+            <div className='bg-base-200 py-16 relative lg:px-20'>
                 <div className='w-1/2'>
-                <h4 className='text-xl font-bold text-blue-900 text-center'>Can’t find your desired service? Let us know 24/7 in 16516.</h4>
+                <h4 className='text-xl font-bold text-blue-600 text-center'>Can’t find your desired service? Let us know 24/7 in 16516.</h4>
                 <div className='text-center'>
                     <button className='px-2 py-1 bg-blue-800 hover:bg-blue-950 rounded-md text-white my-5 text-xl'>Call Now</button>
                 </div>

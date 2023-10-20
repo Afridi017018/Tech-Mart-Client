@@ -65,7 +65,7 @@ const CartItem = ({element}) => {
 
     return (
         <div className='px-5 md:px-20 my-5'>
-            <div className='flex h-56 bg-blue-50 border border-gray-300 rounded-md shadow-xl'>
+            <div className='flex h-56 bg-base-200 border border-gray-300 rounded-md shadow-xl'>
                 <div>
                     <img className='h-full w-80 rounded-l-md' src={element.image} alt="" />
                 </div>
