@@ -20,18 +20,13 @@ const Products = () => {
 
     return (
         <div className='min-h-[558px] flex justify-center items-center'>
-            {
-                brandProduct?.result.length > 0 ?
+       
                     <div>
                         <Advertisement sliderBrand={sliderBrand} />
                         <ProductsCards brandProduct={brandProduct} />
                     </div>
-                    :
-                    <div className=''>
-                        <img src="https://img.freepik.com/free-vector/abstract-coming-soon-halftone-style-background-design_1017-27282.jpg" alt="" />
-                    </div>
+                    
 
-            }
         </div>
     );
 };

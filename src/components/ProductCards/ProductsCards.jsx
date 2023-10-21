@@ -18,10 +18,9 @@ const ProductsCards = ({ brandProduct }) => {
 
                 </div>
                 :
-                <div>
-                    <h2>No data</h2>
-
-                </div>
+                <div className='flex justify-center container pb-10'>
+                        <img className='h-32 w-full rounded' src="https://i.ibb.co/kqTsPfm/coming-Soon.gif" alt="" />
+                    </div>
             }
 
         </div>

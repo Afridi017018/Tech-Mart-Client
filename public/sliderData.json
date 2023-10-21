@@ -88,5 +88,23 @@
         "brand": "xiaomi",
         "sliderImage": "https://i.ibb.co/sg4nFN0/xi3.png"
 
+    },
+    {
+        "id" : "s123467",
+        "brand": "huawei",
+        "sliderImage": "https://i.ibb.co/jW7XnwF/h1.jpg"
+
+    },
+    {
+        "id" : "s123468",
+        "brand": "huawei",
+        "sliderImage": "https://i.ibb.co/kycPZDH/h2.jpg"
+
+    },
+    {
+        "id" : "s123469",
+        "brand": "huawei",
+        "sliderImage": "https://i.ibb.co/M5kyRRT/h3.jpg"
+
     }
 ]
